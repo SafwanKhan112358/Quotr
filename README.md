@@ -1,1 +1,1 @@
-This is a chrome extension that's designed to generate quotes, in response to a user's feelings
+This is a chrome extension that's designed to generate quotes, in response to a user's emotions
