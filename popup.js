@@ -1,28 +1,48 @@
-import { baseApiUrl } from './constants.js';
+import { baseApiUrl, contentKey } from './constants.js';
+import { emotionQueryWordsMap } from './constants.js';
+import { countKey } from './constants.js';
+import { resultsKey } from './constants.js';
 
 
 
 function getEmotion(event) {
   const clickedEmotionButton = event.target;
   const emotion = clickedEmotionButton.id;
-  return emotion;
-}
-
-//API Pecking Order
-//Quotable and Swanson
-
-
-async function getQuote(url, event) {
-  const userEmotion = await getEmotion(event);
-  const response = await fetch(url + userEmotion);
-  var apiResponse = await response.json();
-  console.log(apiResponse);
+  return emotionQueryWordsMap[emotion];
 }
 
 
-//Worth Putting more Attention there
+async function getApiResponse(baseUrl, event) {
+  const queryWordsList = await getEmotion(event);
+
+  let clientUrlRequest = baseUrl;
+  await queryWordsList.forEach(function (element) {
+    clientUrlRequest += ", " + element;
+  });
+
+  //TODO: API Response Validation
+  const response = await fetch(clientUrlRequest);
+  const apiResponse = await response.json();
+  return apiResponse;
+}
+
+async function getQuote(event) {
+  const response = await getApiResponse(baseApiUrl, event);
+  const quoteKeyNumber = Math.floor(Math.random() * (response[countKey]));
+
+  console.log(response[resultsKey][quoteKeyNumber][contentKey]);
+
+
+}
+
+
+
+
+
+//Worth Putting more Attention here
+//TODO: clean this code, need to add more emotions
 document.getElementById("happy").addEventListener("click", function (event) {
-  getQuote(baseApiUrl, event);
+  getQuote(event);
 });
 
 
