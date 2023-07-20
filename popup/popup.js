@@ -1,7 +1,7 @@
-import { baseApiUrl, contentKey } from './constants.js';
-import { emotionQueryWordsMap } from './constants.js';
-import { countKey } from './constants.js';
-import { resultsKey } from './constants.js';
+import { baseApiUrl, contentKey } from '../constants/constants.js';
+import { emotionQueryWordsMap } from '../constants/constants.js';
+import { countKey } from '../constants/constants.js';
+import { resultsKey } from '../constants/constants.js';
 
 
 function getEmotion(event) {
@@ -30,16 +30,16 @@ async function getQuote(event) {
   const quoteKeyNumber = Math.floor(Math.random() * (response[countKey]));
 
   const quote = response[resultsKey][quoteKeyNumber][contentKey];
-  // Close the popup
-  //window.close();
+  //TODO:Hide the popup page, don't close it!!!
 
+  //TODO:API Validation
   // Send a message to the content script to create the overlay
   setTimeout(function () {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      console.log(tabs);
       chrome.tabs.sendMessage(tabs[0].id, { message: quote });
     });
-  }, 2000); // Add a delay of 1 second (adjust as needed)
+  }, 1500);
+
 }
 
 //Worth Putting more Attention here

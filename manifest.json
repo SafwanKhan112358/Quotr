@@ -8,8 +8,8 @@
     "activeTab"
   ],
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": "QuotrPicture.png"
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/QuotrPicture.png"
   },
   "content_scripts": [
     {
@@ -17,7 +17,7 @@
         "<all_urls>"
       ],
       "js": [
-        "contentScript.js"
+        "scripts/content-script.js"
       ]
     }
   ]
