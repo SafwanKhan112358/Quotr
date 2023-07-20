@@ -1,3 +1,5 @@
+**Quotr**:
+
 This is a chrome extension that's designed to generate quotes, in response to a user's emotions
 
 The application's flow: 
@@ -5,18 +7,25 @@ The application's flow:
 2. The user can select an emotion
 3. This emotion is sent, as a query, to a REST API, which generates a quote based on that emotion
 4. A black overlay, with the quote, appears over the user's active browser window
-
-
+---------------------------------------------------------------------------------------
 A visual representation of the application's flow can be seen here: 
 
 <img width="476" alt="image" src="https://github.com/SafwanKhan112358/Quotr/assets/62441768/cf11ab14-2b9b-4bf2-a81a-76a108347c0d">
 
+---------------------------------------------------------------------------------------
+
+
+
 
 Here's the application's appearance:
 
+<img width="922" alt="QuotrPopUp" src="https://github.com/SafwanKhan112358/Quotr/assets/62441768/cada8699-6e52-4af0-b651-073219e7e07a">
+
+---------------------------------------------------------------------------------------
+<img width="960" alt="QuotrPicture" src="https://github.com/SafwanKhan112358/Quotr/assets/62441768/d410f65f-2a24-4c73-beb0-7ad3a0b83153">
 
 
-
+---------------------------------------------------------------------------------------
 Additional Features: 
 - The user can exit from the black overlay using the Exit Button
 
