@@ -34,10 +34,12 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
     let overlayEscapeButton = document.createElement("button");
     overlayEscapeButton.style.position = "absolute";
-    overlayEscapeButton.style.right = "60px";
+    overlayEscapeButton.style.right = "90px";
     overlayEscapeButton.style.top = "25px";
-    overlayEscapeButton.style.height = "30px";
-    overlayEscapeButton.style.width = "45px";
+    overlayEscapeButton.style.paddingLeft = "30px";
+    overlayEscapeButton.style.paddingRight = "30px";
+    overlayEscapeButton.style.paddingTop = "10px";
+    overlayEscapeButton.style.paddingBottom = "10px";
     overlayEscapeButton.style.background = "white";
     overlayEscapeButton.style.borderStyle = "solid";
     overlayEscapeButton.style.borderColor = "white";
