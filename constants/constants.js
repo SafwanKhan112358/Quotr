@@ -4,7 +4,7 @@ export const emotionQueryWordsMap = {
   happy: ["happy", "happiness"],
   excited: ["excited", "motivated", "motivation", "inspiration"],
   angry: ["angry", "anger"],
-  fear: ["fear"],
+  fearful: ["fear"],
   upset: ["misery", "miserable", "pain", "down", "sadness", "sad"],
   lonely: ["loneliness", "lonely"]
 };
