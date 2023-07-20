@@ -15,10 +15,11 @@ Here's the application's appearance:
 <img width="764" alt="image" src="https://github.com/SafwanKhan112358/Quotr/assets/62441768/aeca5220-8895-4cd0-a380-c8b8c7c2941b">
 
 Technologies Used: 
-- HTML/CSS
 - JavaScript
+- HTML/CSS
+- Chrome APIs
 - Postman
-- The ChatGPT API
+- The Quotable REST API
 
 
 

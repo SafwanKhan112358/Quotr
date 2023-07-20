@@ -39,15 +39,17 @@ async function getQuote(event) {
   const quoteKeyNumber = Math.floor(Math.random() * (response[countKey]));
 
   const quote = response[resultsKey][quoteKeyNumber][contentKey];
-  //TODO:Hide the popup page, don't close it!!!
 
-  //TODO:API Validation
+  setTimeout(function () {
+    window.close();
+  }, 1200);
+
   // Send a message to the content script to create the overlay
   setTimeout(function () {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       chrome.tabs.sendMessage(tabs[0].id, { message: quote });
     });
-  }, 1500);
+  }, 1000);
 
 }
 
