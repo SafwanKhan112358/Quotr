@@ -18,7 +18,7 @@
       ],
       "js": [
         "scripts/content-script.js",
-        "scripts/quoteDisplay.js"
+        "quote-display/quote-display.js"
       ]
     }
   ]
