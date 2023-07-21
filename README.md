@@ -27,11 +27,12 @@ Here's the application's appearance:
 <img width="960" alt="QuotrPicture" src="https://github.com/SafwanKhan112358/Quotr/assets/62441768/d410f65f-2a24-4c73-beb0-7ad3a0b83153">
 
 ---------------------------------------------------------------------------------------
-Additional Features: 
+
+**Additional Features**: 
 - The user can exit from the black overlay using the Exit Button
 
 
-Technologies Used: 
+**Technologies Used**: 
 - JavaScript
 - HTML/CSS
 - Chrome APIs
@@ -40,7 +41,7 @@ Technologies Used:
 
 
 
-Coming Soon: 
+**Coming Soon**: 
 - Changes to UI components
 - Adding regenerate Quote Functionality
 
