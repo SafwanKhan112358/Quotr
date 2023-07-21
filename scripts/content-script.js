@@ -1,56 +1,19 @@
-//TODO: structure code 
-
-// Create overlay
-const overlay = document.createElement("div");
-overlay.id = "black-overlay";
-overlay.style.position = "fixed";
-overlay.style.top = "0";
-overlay.style.left = "0";
-overlay.style.width = "100%";
-overlay.style.height = "100%";
-overlay.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
-overlay.style.zIndex = "9999";
-
-function closeOverlay() {
-  document.body.removeChild(overlay);
-}
-
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.message) {
-    overlay.innerHTML = "";
-    const quote = request.message;
+    const overlay = new quoteDisplay(request.message);
+    const bodyElement = document.body;
+    console.log(typeof (bodyElement));
+    console.log(bodyElement);
+    // Get the collection of child elements of the body
+    const childElements = bodyElement.children;
+    console.log(typeof (childElements));
+    console.log(childElements);
 
-    let quoteMessage = document.createElement("p");
-    quoteMessage.textContent = quote;
-    quoteMessage.style.fontFamily = "Arial", "Segoe UI";
-    quoteMessage.style.fontSize = "28px";
-    quoteMessage.style.fontWeight = "bold";
-    quoteMessage.style.color = "white";
-    quoteMessage.style.position = "absolute";
-    quoteMessage.style.top = "50%";
-    quoteMessage.style.left = "50%";
-    quoteMessage.style.transform = "translate(-50%, -50%)";
-
-
-    let overlayEscapeButton = document.createElement("button");
-    overlayEscapeButton.style.position = "absolute";
-    overlayEscapeButton.style.right = "90px";
-    overlayEscapeButton.style.top = "25px";
-    overlayEscapeButton.style.paddingLeft = "30px";
-    overlayEscapeButton.style.paddingRight = "30px";
-    overlayEscapeButton.style.paddingTop = "10px";
-    overlayEscapeButton.style.paddingBottom = "10px";
-    overlayEscapeButton.style.background = "white";
-    overlayEscapeButton.style.borderStyle = "solid";
-    overlayEscapeButton.style.borderColor = "white";
-    overlayEscapeButton.textContent = "Exit";
-    overlayEscapeButton.onclick = closeOverlay;
-
-
-
-    overlay.appendChild(quoteMessage);
-    overlay.appendChild(overlayEscapeButton);
-    document.body.appendChild(overlay);
+    // Iterate through the child elements using a for loop
+    for (let i = 0; i < childElements.length; i++) {
+      const childElement = childElements[i];
+      console.log(childElement); // Output: Each child element in the body
+    }
   }
-});
+})
 
